@@ -6,7 +6,6 @@
 
 body {
     background-color: hsl(221, 100%, 96%);
-    padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -17,12 +16,12 @@ main {
     align-items: center;
 }
 
-div#container {
+main div#container {
     display: flex; 
     width: 736px; 
     min-height: 532px;
     background-color: white; 
-    border-radius: 10px;
+    border-radius: 2em;
 }
 
 section#card_result {
@@ -33,12 +32,12 @@ section#card_result {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
+    border-radius: 2em;
     color: white;
     text-align: center;
 }
 
-.card_score {
+section#card_result > .card_score {
     width: 200px;
     height: 200px;
     display: flex;
@@ -49,9 +48,143 @@ section#card_result {
     border-radius: 50%;
 }
 
-section:nth-child(2) {
+section#card_result .card_score > .total_score {
+    font-size: 4.5em;
+}
+
+section#card_result .card_score > .sub_score{
+    font-size: 1.1em;
+    color: #cac9ff;
+}
+
+section#card_result .title-descricao {
+    font-size: 2rem;
+}
+
+section#card_result .descricao {
+    width: 230px; 
+    color: #cac9ff;
+}
+
+/*Summary */
+section#CardSummary {
     flex: 1;
     padding: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+section#CardSummary > .container_cardSummary {
+    display: flex; 
+    flex-direction: column; 
+    gap: 1em;
+}
+
+section#CardSummary .container_cardSummary > .card_ResultSummary {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px;
+    border-radius: 12px;
+}
+
+section#CardSummary div.container_cardSummary div.card_ResultSummary > .flex-wrap-cardSummary {
+    display: flex; 
+    gap: 0.8em;
+}
+
+section#CardSummary .container_cardSummary > #card_summary_Reaction {
+    color:  rgb(255, 87, 87);   
+    background: linear-gradient(0deg, #fffffff2, rgba(255, 255, 255, 0.95)), rgb(255, 87, 87);
+}
+
+section#CardSummary .container_cardSummary > #card_summary_Memory {
+    color: hsl(39, 100%, 56%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), rgb(255, 178, 30);
+}
+
+section#CardSummary .container_cardSummary > #card_summary_Verbal {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+section#CardSummary .container_cardSummary > #card_summary_Visual {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.card_ResultSummary > .score-summary {
+    color: #303b5980;
+}
+
+div.card_ResultSummary .score-summary p > span {
+    color: #303b59;
+    font-weight: bolder;
+}
+
+section#CardSummary a {
+    text-decoration: none;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+    text-align: center;
+    font-weight: bolder;
+    width: 100%;
+    padding: 20px;
+    border-radius: 2em;
+    border: none;
+}
+
+section#CardSummary a:hover {
+    background-image: linear-gradient( 180deg, #7755ff 0%, #6943ff .01%, #2f2ce9 100% );
+}
+
+@media screen and (min-width: 511px) and (max-width: 760px) {
+    body {
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width: 760px){
+    div#container {
+        display: flex;
+        flex-direction: column;
+        width: 100vh; 
+        border-radius: 0em;
+    }
+    section#card_result {
+        flex: none;
+        height: 453px;
+        padding: 30px;
+        border-top-right-radius: 0em;
+        border-top-left-radius: 0em;
+    }
+
+    section#card_result .descricao {
+        width: 260px;
+    }
+    section#CardSummary {
+        flex: none;
+        height: 453px;
+        padding: 30px;
+    }
+}
+
+@media screen and (min-width: 761px) and (max-width: 998px){
+    main div#container {
+        display: flex;
+        flex-direction: column;
+        width: 700px;
+    }
+    section#card_result {
+        flex: none;
+        height: 403px;
+        padding: 30px;
+        border-top-right-radius: 0em;
+        border-top-left-radius: 0em;
+    }
+
+    section#CardSummary {
+        flex: none;
+        height: 503px;
+        padding: 30px;
+    }
 }

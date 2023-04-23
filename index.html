@@ -11,32 +11,62 @@
     <main>
         <div id="container">
             <section id="card_result">
-                <h2>Your Result</h2>
+                <h2 style="color: #cac9ff;">Your Result</h2>
                 <div class="card_score">
-                   <p>76</p>
-                   <p>100</p>
+                   <p class="total_score">76</p>
+                   <p class="sub_score">of 100</p>
                 </div>
-                <h1 style="font-size: 2rem;">Great</h1>
-                <p style="width: 230px;">You scored higher than 65% of the people who have taken these tests.</p>
+                <h1 class="title-descricao">Great</h1>
+                <p class="descricao">You scored higher than 65% of the people who have taken these tests.</p>
             </section>
-            <section>
+            <section id="CardSummary">
                 <h1>Summary</h1>
-                <div style="display: flex; flex-direction: column; gap: 1em;">
-                    <div style="display: flex; justify-content: space-between; background-color: bisque;">
-                        <div style="display: flex; gap: 1em;">
+                <div class="container_cardSummary">
+                    <div class="card_ResultSummary"
+                    id="card_summary_Reaction">
+                        <div class="flex-wrap-cardSummary">
                             <img src="assets/images/icon-reaction.svg" alt="">
                             <p>Reaction</p>
                         </div>
-                        <p>80 / 100</p>
+                        <div class="score-summary">
+                            <p>
+                                <span>80</span> / 100
+                            </p>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between; background-color: aquamarine;">
-                        <div style="display: flex; gap: 1em;">
+                    <div class="card_ResultSummary" id="card_summary_Memory">
+                        <div class="flex-wrap-cardSummary">
                             <img src="assets/images/icon-memory.svg" alt="">
                             <p>Memory</p>
                         </div>
-                        <p>80 / 100</p>
+                        <div class="score-summary">
+                            <p>
+                                <span>92</span> / 100
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card_ResultSummary" id="card_summary_Verbal">
+                        <div class="flex-wrap-cardSummary">
+                            <img src="assets/images/icon-verbal.svg" alt="">
+                            <p>Verbal</p>
+                        </div>
+                        <div class="score-summary">
+                            <p><span>61</span> / 100</p>
+                        </div>
+                    </div>
+                    <div class="card_ResultSummary" id="card_summary_Visual">
+                        <div class="flex-wrap-cardSummary">
+                            <img src="assets/images/icon-visual.svg" alt="">
+                            <p>Visual</p>
+                        </div>
+                        <div class="score-summary">
+                            <p>
+                                <span>72</span> / 100
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <a href="#">Continue</a>
             </section>
         </div>
     </main>
